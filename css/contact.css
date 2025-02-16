@@ -5,6 +5,8 @@ body {
     padding: 20px;
     background-color: #131313;
     color: #f4f4f4;
+    overflow-x: hidden;
+
 }
 .main-container{
     width: 100%;

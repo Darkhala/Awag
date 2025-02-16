@@ -5,6 +5,7 @@ body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
     color: #eee;
+    overflow-x: hidden;
 }
 
 #video-background {
