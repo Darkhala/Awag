@@ -473,21 +473,15 @@ h2 {
     /* Header */
     header {
         flex-direction: row;
-        padding: 1rem;
-        align-items: center;
+        padding: 0.625rem;
     }
-
-    header .logo img {
-        height: 3rem;
-    }
-
+    
     .menu-icon {
-        margin-right: 1rem;
+        display: flex;
     }
-
-    .menu-icon .bar {
-        width: 2rem;
-        height: 0.2rem;
+    
+    .overlay-menu {
+        width: 70%; /* Make it wider for better access */
     }
 
     /* Hero Section */
