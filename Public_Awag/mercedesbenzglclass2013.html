@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW X1 2016</title>
+    <link rel="stylesheet" href="CSS/productinfo.css">
+    <link rel="icon" href="images/footerlogo.png" type="image/icon">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/awag.png" alt="AWAG Logo">
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <span>Menu</span>
+            </div>
+        </header>
+        <div class="overlay-menu" id="overlay-menu">
+            <div class="overlay-menu-content">
+                <a href="index.html">Home</a>
+                <a href="Allcars.html">Vehicles on sale</a>
+                <a href="CarHire.html">Cars for hire</a>
+                <a href="events.html">Car Events</a>
+                <a href="CarArticles.html">Car Articles</a>
+                <a href="About.html">About us</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+        </div>
+
+    <section class="product-section">
+        <div class="product-box">
+            <div class="product-images">
+                <img src="images/mercedes benz gl class2013march/1.jpg" alt="Main Product Image" id="mainImage">
+                
+                <!-- Small images for thumbnail navigation -->
+                <div class="thumbnail-images" id="thumbnailContainer">
+                    <img src="images/mercedes benz gl class2013march/1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeMainImage(this)">
+                    <img src="images/mercedes benz gl class2013march/2.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeMainImage(this)">
+                    <img src="images/mercedes benz gl class2013march/3.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeMainImage(this)">
+                    <img src="images/mercedes benz gl class2013march/4.jpg" alt="Thumbnail 6" class="thumbnail" onclick="changeMainImage(this)">
+                    <img src="images/mercedes benz gl class2013march/5.jpg" alt="Thumbnail 6" class="thumbnail" onclick="changeMainImage(this)">
+                    <img src="images/mercedes benz gl class2013march/6.jpg" alt="Thumbnail 6" class="thumbnail" onclick="changeMainImage(this)">
+                    <img src="images/mercedes benz gl class2013march/7.jpg" alt="Thumbnail 6" class="thumbnail" onclick="changeMainImage(this)">
+                    <img src="images/mercedes benz gl class2013march/8.jpg" alt="Thumbnail 6" class="thumbnail" onclick="changeMainImage(this)">
+                    <!-- Add more thumbnail images as needed -->
+                </div>
+            </div>
+    
+            <div class="product-description">
+                
+                    <div class="title-container">
+                        <h2>Mercedes-Benz GL Class 2013/March <br>3.0 GL350 V6 BlueTEC AMG Sport G-Tronic 4WD Euro 6
+                        </h2>
+                        <h2>Year 2016</h2>
+                    </div>
+                    <p><strong>Price:</strong> Ksh.2,100,000</p>
+                    <div class="details-container">
+                        <div class="detail-item">
+                            <div class="left">Body type :</div>
+                            <div class="right">SUV</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="left">Engine:</div>
+                            <div class="right">3.0l diesel</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="left">mileage:</div>
+                            <div class="right">95,233 miles </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="left">transmission :</div>
+                            <div class="right">7 speed automatic dsg</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="left">drive train:</div>
+                            <div class="right">Front wheel</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="left">NOTABLE FEATURES:</div>
+                            <div class="right">Gearbox : Automatic,
+                                Panoramic Glass Sunroof
+                                </div>
+                        </div>
+                        <button class="contactdealer" onclick="redirectToWhatsApp()">Request Car</button>
+
+                        <!-- Add more detail items as needed -->
+                    </div>
+                </div>
+        </div>
+        
+    </section>
+    <footer class="footer">
+        <div class="footer-links">
+            <span>© 2024 AWAG</span>
+            <div class="separator"></div>
+            <span>Design by: <a href="https://wa.me/254720049116" target="_blank" style="color: #fff;">Halahala</a></span>
+        </div>
+    
+        <div class="follow-on">
+          <span>Follow on</span>
+          <div class="separator"></div>
+          <a href="https://www.facebook.com/profile.php?id=100091777887473">
+              <img src="images/fblog.png" alt="Facebook" class="social-icon">
+          </a>
+          <div class="separator"></div>
+          <a href="https://www.instagram.com/bml_imports_ltd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+              <img src="images/iglog.png" alt="Instagram" class="social-icon">
+          </a>
+          <div class="separator"></div>
+          <a href="https://wa.me/254729425606">
+              <img src="images/whatslog.png" alt="WhatsApp" class="social-icon">
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            const overlayMenu = document.getElementById('overlay-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            if (overlayMenu.classList.contains('open')) {
+                overlayMenu.classList.remove('open');
+                menuIcon.classList.remove('open');
+            } else {
+                overlayMenu.classList.add('open');
+                menuIcon.classList.add('open');
+            }
+        });
+        
+        const tabs = document.querySelectorAll('.shop-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        }); 
+    </script>
+    <script >
+                function changeMainImage(thumbnail) {
+            var mainImage = document.getElementById('mainImage');
+            mainImage.src = thumbnail.src;
+
+            // Remove highlight from all thumbnails
+            var thumbnails = document.getElementsByClassName('thumbnail');
+            for (var i = 0; i < thumbnails.length; i++) {
+                thumbnails[i].classList.remove('selected');
+            }
+
+            // Add highlight to the selected thumbnail
+            thumbnail.classList.add('selected');
+        }
+
+    </script>
+    <script>
+        function redirectToWhatsApp() {
+            // Get the current page's URL
+            var currentPageURL = window.location.href;
+
+            // Encode the URL for use in the message
+            var encodedMessage = encodeURIComponent(currentPageURL);
+
+            // Construct the WhatsApp URL with pre-filled message
+            var whatsappURL = 'https://wa.me/254729425606?text=' + encodedMessage;
+
+            // Redirect to WhatsApp
+            window.location.href = whatsappURL;
+        }
+    </script>
+</body>
+</html>

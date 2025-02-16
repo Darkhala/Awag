@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lamborghini Gallardo lp560
+* source:	https://sketchfab.com/3d-models/lamborghini-gallardo-lp560-86691e28bae34cffa896b148c895e58d
+* author:	Black Snow (https://sketchfab.com/BlackSnow02)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lamborghini Gallardo lp560" (https://sketchfab.com/3d-models/lamborghini-gallardo-lp560-86691e28bae34cffa896b148c895e58d) by Black Snow (https://sketchfab.com/BlackSnow02) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

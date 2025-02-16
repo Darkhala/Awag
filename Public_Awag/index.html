@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWAG car dealer</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="images/awag.png" type="image/icon">
+
+</head>
+<body>
+    <div class="cont-body">
+        <video autoplay muted loop id="video-background">
+            <source src="media/sample2.mp4" type="video/mp4">
+        </video>
+        <header>
+            <div class="logo">
+                <img src="images/awag.png" alt="AWAG Logo">
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <span>Menu</span>
+            </div>
+        </header>
+        <div class="hero-section">
+            <div class="overlay"></div>
+            <div class="content">
+                <h2 class="hea2"> AWAG </h2>
+                <div class="nav2">
+                    <a href="#">The  Best</a>
+                    <a href="#">Car</a>
+                    <a href="#">Dealer</a>
+                    <a href="#">In</a>
+                    <a href="#">Nairobi Kenya</a>
+                </div>
+                <h1 class="state1">We'll give you the car you want, just name it.</h1>
+                <p class="par1">We're good with giving you the car you want. Try us to see just how easy it is to get your dream car with AWAG today.</p>
+                <a href="#" class="important-info">*cars near you on sale!!!</a>
+                <a href="#" class="learn-more">Cars On Sale</a>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-menu" id="overlay-menu">
+        <div class="overlay-menu-content">
+            <a href="index.html">Home</a>
+            <a href="Allcars.html">Vehicles on sale</a>
+            <a href="CarHire.html">Cars for hire</a>
+            <a href="events.html">Car Events</a>
+            <a href="CarArticles.html">Car Articles</a>
+            <a href="About.html">About us</a>
+            <a href="contact.html">Contact us</a>
+        </div>
+    </div>
+    <div class="shop-section">
+
+        <div class="titlecontainer">
+            <h2>Our Latest Arrivals</h2>
+            <div class="line"></div>
+            <div class="line small"></div>
+        </div>
+      
+        <div class="shop-cards">
+            <div class="shop-card">
+                <img src="images/landroverlatest.jpg" alt="Vehicle 1">
+                <h3>Our Latest Arrivals</h3>
+            </div>
+            <div class="shop-card">
+                <img src="images/Mercedeslatest.jpg" alt="Vehicle 2">
+                <h3>Our Latest Arrivals</h3>
+            </div>
+            <div class="shop-card">
+                <img src="images/bmwlatest.jpg" alt="Vehicle 3">
+                <h3>Our Latest Arrivals </h3>
+            </div>
+        </div>
+
+        <div class="titlecontainer">
+            <h2>Do we have your favorite make?</h2>
+            <h2>click on it find out</h2>
+            <div class="line"></div>
+            <div class="line small"></div>
+        </div>
+        <section class="horizontal-scroll">
+
+            <!-- Add onclick handlers for each brand logo -->
+            <a href="javascript:void(0);" onclick="filterByBrand('Ferrari')">
+                <img src="images/logos/Ferrari.png" alt="Ferrari Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Lamborghini')">
+                <img src="images/logos/Lamborghini.png" alt="Lamborghini Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Porsche')">
+                <img src="images/logos/Porsche.png" alt="Porsche Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Dodge')">
+                <img src="images/logos/Dodge.png" alt="Dodge Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Mclaren')">
+                <img src="images/logos/Mclaren.png" alt="Mclaren Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Mercedes')">
+                <img src="images/logos/Mercedes.png" alt="Mercedes Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Mesarati')">
+                <img src="images/logos/Mesarati.png" alt="Mesarati Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Mitsubishi')">
+                <img src="images/logos/Mitsubishi.png" alt="Mitsubishi Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Nissan')">
+                <img src="images/logos/Nissan.png" alt="Nissan Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('RollsRoyce')">
+                <img src="images/logos/RollsRoyce.png" alt="RollsRoyce Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Suzuki')">
+                <img src="images/logos/Suzuki.png" alt="Suzuki Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Renault')">
+                <img src="images/logos/Renault.png" alt="Renault Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Cadillac')">
+                <img src="images/logos/Cadillac.png" alt="Cadillac Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('VolksWagen')">
+                <img src="images/logos/VolksWargen.png" alt="VolksWagen Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('BMW')">
+                <img src="images/logos/BMW.png" alt="BMW Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Mazda')">
+                <img src="images/logos/Mazda.png" alt="Mazda Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Lexus')">
+                <img src="images/logos/Lexus.png" alt="Lexus Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Toyota')">
+                <img src="images/logos/Toyota.png" alt="Toyota Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Subaru')">
+                <img src="images/logos/Subaru.png" alt="Subaru Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Bentley')">
+                <img src="images/logos/Bentley.png" alt="Bentley Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Audi')">
+                <img src="images/logos/Audi.png" alt="Audi Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Bugatti')">
+                <img src="images/logos/Bugatti.png" alt="Bugatti Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('AstonMartin')">
+                <img src="images/logos/AstonMartin.png" alt="AstonMartin Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Chevrolette')">
+                <img src="images/logos/Chevrolette.png" alt="Chevrolette Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Chrysler')">
+                <img src="images/logos/Chrysler.png" alt="Chrysler Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Ford')">
+                <img src="images/logos/Ford.png" alt="Ford Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Honda')">
+                <img src="images/logos/Honda.png" alt="Honda Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Hyundai')">
+                <img src="images/logos/Hyundai.png" alt="Hyundai Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Isuzu')">
+                <img src="images/logos/Isuzu.png" alt="Isuzu Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Jaguar')">
+                <img src="images/logos/Jaguar.png" alt="Jaguar Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Jeep')">
+                <img src="images/logos/Jeep.png" alt="Jeep Image">
+            </a>
+            <a href="javascript:void(0);" onclick="filterByBrand('Landrover')">
+                <img src="images/logos/Landrover.png" alt="Landrover Image">
+            </a>
+            <script>
+                function filterByBrand(brand) {
+                    localStorage.setItem("selectedBrand", brand);
+                    window.location.href = "Allcars.html"; // Redirect to the search page
+                }
+            </script>
+        </section>
+
+        <div class="titlecontainer">
+            <h2>OFFERS!!!</h2>
+            <div class="line"></div>
+            <div class="line small"></div>
+        </div>
+
+        <div class="shop-cards">
+            <div class="shop-card">
+                <img src="images/offer1.jpg" alt="Vehicle 1">
+                <h3>On Offer</h3>
+            </div>
+            <div class="shop-card">
+                <img src="images/offer2.jpg" alt="Vehicle 2">
+                <h3>On Offer</h3>
+            </div>
+            <div class="shop-card">
+                <img src="images/offer3.jpg" alt="Vehicle 3">
+                <h3>On Offer</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="instagram-section">
+        <h2>Latest Instagram Posts</h2>
+        <div id="instagram-posts" class="instagram-posts"></div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/Allcars.js"></script>
+   
+</body>
+</html>

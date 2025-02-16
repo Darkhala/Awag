@@ -1,0 +1,461 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #131313;
+    color: #f4f4f4;
+    overflow-x: hidden;
+}
+.main-container{
+    width: 100%;
+    max-width: 100%; /* Adjust the maximum width according to your design */
+    overflow-x: hidden;
+    margin: 0 auto; /* Center the container horizontally */
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 5px;
+    padding-right: 50px;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav {
+    display: none; /* Hide nav by default */
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+header nav a.build-price {
+    background-color: #076820;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    align-items: center;
+    margin-right: 30px;
+    transition: all 0.3s ease;
+}
+
+.menu-icon .bar {
+    width: 40px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.menu-icon span {
+    color: white;
+    margin-left: 3px;
+}
+
+.menu-icon.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.overlay-menu {
+    display: none;
+    position: fixed;
+    top: 70px; /* Adjusted to start below the hamburger button */
+    right: 0;
+    padding-top: 5px;
+    width: 40%; /* Adjusted to be quarter to half the screen width */
+    height: calc(100% - 70px);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.overlay-menu.open {
+    display: block;
+}
+
+.overlay-menu-content {
+    position: absolute;
+    top: 3%;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: right;
+}
+
+.overlay-menu-content a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 10px;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slide-in 1s ease forwards;
+}
+
+.overlay-menu-content a:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.overlay-menu-content a:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.overlay-menu-content a:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.overlay-menu-content a:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+.overlay-menu-content a:nth-child(5) {
+    animation-delay: 0.9s;
+}
+
+.overlay-menu-content a:nth-child(6) {
+    animation-delay: 0.10s;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, #131313, #076820);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.stat-item {
+    background: #131313;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 9.1);
+    flex: 1;
+    margin: 0 10px;
+}
+
+.stat-item h2 {
+    color: #076820;
+}
+
+/* Beliefs Section */
+.belief-items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.belief {
+    background: #131313;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 9.1);
+}
+
+.belief h3 {
+    color: #076820;
+}
+
+/* Story Section */
+.story {
+    background: #131313;
+    padding: 40px 20px;
+}
+
+.story-img {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* Feedback Section */
+.feedback-section {
+    background: #131313;
+    padding: 40px 20px;
+}
+
+.feedback-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feedback-item {
+    background: #131313;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.btn {
+    background: #076820;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #076820;
+}
+.feedback-form {
+    max-width: 400px;
+    background: #131313;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    margin-left: 19rem !important;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background: #f9f9f9;
+    outline: none;
+}
+
+.feedback-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.feedback-form .btn {
+    width: 100%;
+    padding: 12px;
+    background: #076820;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.feedback-form .btn:hover {
+    background: #076820;
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    background: #131313;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+.footer {
+    background: #131313;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px; /* Adjust the height of the footer */
+    position: relative;
+    width: 100%;
+  }
+  
+  .footer-links {
+    display: flex;
+    padding-left: 60px;
+    font-size: 11px;
+    color: white;
+  }
+  
+  .separator {
+    margin: 0 10px;
+    border-right: 1px solid white;
+    height: 30px; /* Adjust the height of the separator */
+  }
+  
+  .logo {
+    width: 200px; /* Adjust the width of the logo */
+    height: auto;
+  }
+  
+  .follow-on {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icon {
+    width: 20px; /* Adjust the width of the social icons */
+    height: auto;
+    margin: 0 5px;
+    margin-right: 30px;
+  }
+  /* Responsive Styles for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .main-container {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: row;
+        padding: 0.625rem;
+    }
+    
+    .menu-icon {
+        display: flex;
+    }
+    
+    .overlay-menu {
+        width: 70%; /* Make it wider for better access */
+    }
+    .container{
+        padding-top: 4rem;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-item {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .belief-items {
+        flex-direction: column;
+    }
+
+    .belief {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .story img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .feedback-form {
+        max-width: 100%;
+        margin-left: 0 !important;
+    }
+
+    .feedback-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback-item {
+        width: 90%;
+    }
+    /* Footer remains the same but smaller */
+    .footer {
+        font-size: 0.875rem; /* Reduce text size slightly */
+        padding: 0.625rem; /* Reduce padding */
+        margin-left: 0.5rem; /* Move it more to the left */
+        text-align: left; /* Align text to the left */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align content to the left */
+    }
+
+    .footer-links {
+        gap: 0.5rem; /* Slightly reduce the spacing */
+    }
+
+    .follow-on {
+        display: flex;
+        flex-wrap: wrap; /* Prevent overlap */
+        justify-content: flex-start; /* Align icons to the left */
+        gap: 0.5rem; /* Add spacing */
+    }
+
+    .follow-on img {
+        width: 1.5rem; /* Reduce icon size */
+        height: 1.5rem;
+        margin: 0.3125rem; /* Keep spacing consistent */
+    }
+}
+
+

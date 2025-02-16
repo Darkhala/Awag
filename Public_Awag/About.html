@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AWAG</title>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <div class="logo">
+                <img src="images/awag.png" alt="AWAG Logo">
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <span>Menu</span>
+            </div>
+        </header>
+        <div class="overlay-menu" id="overlay-menu">
+            <div class="overlay-menu-content">
+                <a href="index.html">Home</a>
+                <a href="Allcars.html">Vehicles on sale</a>
+                <a href="CarHire.html">Cars for hire</a>
+                <a href="events.html">Car Events</a>
+                <a href="CarArticles.html">Car Articles</a>
+                <a href="About.html">About us</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="container">
+                <h1>About AWAG</h1>
+                <p>Connecting Brands, Building Trust</p>
+            </div>
+        </div>
+        
+        <section class="stats container">
+            <div class="stat-item">
+                <h2>2024</h2>
+                <p>Founded</p>
+            </div>
+            <div class="stat-item">
+                <h2>20</h2>
+                <p>car sales and hires</p>
+            </div>
+            <div class="stat-item">
+                <h2>10+</h2>
+                <p>Clients</p>
+            </div>
+        </section>
+        
+        <section class="beliefs container">
+            <h2>Our Beliefs</h2>
+            <div class="belief-items">
+                <div class="belief">
+                    <h3>Automotive Excellence</h3>
+                    <p>We showcase the finest cars, exceptional showrooms, and offer reliable car hire services.</p>
+                </div>
+                <div class="belief">
+                    <h3>Building Trust</h3>
+                    <p>We connect brands with customers through engaging content.</p>
+                </div>
+                <div class="belief">
+                    <h3>Innovation & Growth</h3>
+                    <p>We adapt to the evolving automotive landscape.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="story container">
+            <h2>Our Story</h2>
+            <p>AWAG was founded with a mission to revolutionize Kenya's automotive industry...</p>
+            <img src="images/showcases.jpg" alt="Car Showcase" class="story-img">
+            <h3>Driving the Future</h3>
+            <p>With a passion for cars and a commitment to quality, AWAG continues to set industry standards.</p>
+            <img src="images/luxary cars.jpg" alt="Luxury Cars" class="story-img">
+        </section>
+        
+        <section class="feedback-section container">
+            <h2>Client Feedback</h2>
+            <div id="feedback-list" class="feedback-list"></div>
+            <button id="more-feedback" class="btn">More Feedback</button>
+            
+            <div class="overlay" id="overlay">
+                <div class="overlay-content">
+                    <span class="close" id="close-overlay">&times;</span>
+                    <h2>All Feedback</h2>
+                    <div id="all-feedback" class="all-feedback"></div>
+                </div>
+            </div>
+            <h2><br>Share your Feedback<br></h2>
+            <form id="feedback-form" class="feedback-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <textarea id="feedback" placeholder="Your Feedback" required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <span>© 2024 AWAG</span>
+                <div class="separator"></div>
+                <span>Design by: <a href="https://wa.me/254720049116" target="_blank" style="color: #fff;">Halahala</a></span>
+            </div>
+        
+            <div class="follow-on">
+              <span>Follow on</span>
+              <div class="separator"></div>
+              <a href="https://www.facebook.com/profile.php?id=100091777887473">
+                  <img src="images/fblog.png" alt="Facebook" class="social-icon">
+              </a>
+              <div class="separator"></div>
+              <a href="https://www.instagram.com/bml_imports_ltd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                  <img src="images/iglog.png" alt="Instagram" class="social-icon">
+              </a>
+              <div class="separator"></div>
+              <a href="https://wa.me/254729425606">
+                  <img src="images/whatslog.png" alt="WhatsApp" class="social-icon">
+              </a>
+            </div>
+          </footer>    
+        </div>
+    <link rel="stylesheet" href="css/about.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>    
+    <script src="js/about.js"></script>
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            const overlayMenu = document.getElementById('overlay-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            if (overlayMenu.classList.contains('open')) {
+                overlayMenu.classList.remove('open');
+                menuIcon.classList.remove('open');
+            } else {
+                overlayMenu.classList.add('open');
+                menuIcon.classList.add('open');
+            }
+        });
+
+        const tabs = document.querySelectorAll('.shop-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

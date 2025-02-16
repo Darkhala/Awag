@@ -1,0 +1,416 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 5px;
+    padding-right: 50px;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav {
+    display: none; /* Hide nav by default */
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+header nav a.build-price {
+    background-color: #076820;
+}
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    align-items: center;
+    margin-right: 30px;
+    transition: all 0.3s ease;
+}
+
+.menu-icon .bar {
+    width: 40px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.menu-icon span {
+    color: white;
+    margin-left: 3px;
+}
+
+.menu-icon.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.overlay-menu {
+    display: none;
+    position: fixed;
+    top: 70px; /* Adjusted to start below the hamburger button */
+    right: 0;
+    padding-top: 5px;
+    width: 40%; /* Adjusted to be quarter to half the screen width */
+    height: calc(100% - 70px);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.overlay-menu.open {
+    display: block;
+}
+
+.overlay-menu-content {
+    position: absolute;
+    top: 3%;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: right;
+}
+
+.overlay-menu-content a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 10px;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slide-in 1s ease forwards;
+}
+
+.overlay-menu-content a:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.overlay-menu-content a:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.overlay-menu-content a:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.overlay-menu-content a:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+.overlay-menu-content a:nth-child(5) {
+    animation-delay: 0.9s;
+}
+
+.overlay-menu-content a:nth-child(6) {
+    animation-delay: 0.10s;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0);
+    z-index: 1;
+}
+
+.hero-section .content {
+    position: relative;
+    z-index: 2;
+}
+
+.hea2 {
+    position: relative;
+    font-size: 14vw;
+    color:#131313;
+    -webkit-text-stroke: 0.1vw #131311;
+    text-transform: uppercase;
+}
+.hea2::before{
+    content:attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #076820;
+    -webkit-text-stroke: 0vw #fff;
+    border-right: 2px solid #076820;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+
+.hero-section .nav2 a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+.hero-section .state1 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.hero-section .par1 {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.hero-section .important-info,
+.hero-section .learn-more {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 30s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.banner .content h1 {
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #131313;
+    position: relative;
+}
+
+.banner .content h1::after {
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+
+.banner .content .author {
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+}
+
+.banner .content h2 {
+    font-size: 3em;
+}
+
+.banner .content .model {
+    background-image: url(/images/awag.png);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1023px) {
+    .banner .slider {
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+    .banner .slider .item {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
+    }
+    .banner .content h1 {
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+    .banner .content .author {
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner .slider {
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
+    }
+    .banner .slider .item {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
+    }
+    .banner .content h1 {
+        font-size: 5em;
+    }
+}
+
+/* Responsive CSS for smaller screens */
+
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 10px 20px;
+    }
+    .menu-icon {
+        margin-right: 20px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menu-icon {
+        margin-right: 15px;
+    }
+    .overlay-menu {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .menu-icon .bar {
+        width: 30px;
+    }
+    .overlay-menu {
+        width: 80%;
+    }
+    
+}
+
+
