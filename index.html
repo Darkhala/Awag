@@ -6,7 +6,6 @@
     <title>AWAG car dealer</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="images/awag.png" type="image/icon">
-
 </head>
 <body>
     <div class="cont-body">
@@ -218,6 +217,29 @@
 
     <script src="js/index.js"></script>
     <script src="js/Allcars.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBpMaSBucKQVhmpAbrnzleY8scx6k0kLkk",
+          authDomain: "awag-website.firebaseapp.com",
+          projectId: "awag-website",
+          storageBucket: "awag-website.firebasestorage.app",
+          messagingSenderId: "395803819158",
+          appId: "1:395803819158:web:094edbf5b3ba9fb8f5d6b7",
+          measurementId: "G-0GP4188M78"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
    
 </body>
 </html>
